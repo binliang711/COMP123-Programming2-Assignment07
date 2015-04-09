@@ -53,6 +53,7 @@
             this.OKButton.TabIndex = 15;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
+            this.OKButton.Click += new System.EventHandler(this.OKButton_Click);
             // 
             // ChargeNotifyLabel
             // 
