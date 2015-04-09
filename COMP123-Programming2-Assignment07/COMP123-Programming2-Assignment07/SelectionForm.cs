@@ -12,13 +12,24 @@ namespace COMP123_Programming2_Assignment07
 {
     public partial class SelectionForm : Form
     {
+        // PRIVATE INSTANCE VARIABLES
+        private Bitmap[] _imageArray = { Properties.Resources.seasonofthewitch, Properties.Resources.thedilemma,
+                                         Properties.Resources.thegreenhornet,   Properties.Resources.deathrace2, 
+                                         Properties.Resources.companymen,       Properties.Resources.nostringsattached, 
+                                         Properties.Resources.thewayback,       Properties.Resources.themechanic, 
+                                         Properties.Resources.therite,          Properties.Resources.sanctum, 
+                                         Properties.Resources.theotherwoman,    Properties.Resources.theroommate, 
+                                         Properties.Resources.waitingforever,   Properties.Resources.cedarrapids, 
+                                         Properties.Resources.gnomeoandjuliet,  Properties.Resources.justgowithit, 
+                                         Properties.Resources.theeagle,         Properties.Resources.iamnumberfour, 
+                                         Properties.Resources.footloose,        Properties.Resources.realsteel            };
         public OrderForm NextForm = new OrderForm();
         public SelectionForm PrimaryForm;
 
         public List<Movie> movies = new List<Movie>();
 
         // private instance variables
-        int _movieIndex;
+        private int _movieIndex;
 
         public SelectionForm()
         {
@@ -77,11 +88,14 @@ namespace COMP123_Programming2_Assignment07
             MovieTitleTextBox.Text = movies[this._movieIndex].Title;
             MovieCategoryTextBox.Text = movies[this._movieIndex].Category;
             MovieCostTextBox.Text = movies[this._movieIndex].Cost.ToString();
+            SmallGraphicPictureBox.Image = this._imageArray[this._movieIndex];
         }
 
         private void SelectionForm_Load(object sender, EventArgs e)
         {
             MovieComboBox.SelectedIndex = 0;
+
+            SmallGraphicPictureBox.Image = this._imageArray[this._movieIndex];
         }
     }
 }

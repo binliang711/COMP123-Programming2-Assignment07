@@ -83,6 +83,7 @@
             // 
             // SmallGraphicPictureBox
             // 
+            this.SmallGraphicPictureBox.BackColor = System.Drawing.Color.White;
             this.SmallGraphicPictureBox.Image = global::COMP123_Programming2_Assignment07.Properties.Resources.companymen;
             this.SmallGraphicPictureBox.Location = new System.Drawing.Point(18, 30);
             this.SmallGraphicPictureBox.Name = "SmallGraphicPictureBox";
