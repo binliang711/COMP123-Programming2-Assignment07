@@ -30,7 +30,6 @@
         {
             this.CurrentMoviesLabel = new System.Windows.Forms.Label();
             this.PomptLabel = new System.Windows.Forms.Label();
-            this.FilmListBox = new System.Windows.Forms.ListBox();
             this.YourSelectionGroupBox = new System.Windows.Forms.GroupBox();
             this.SmallGraphicPictureBox = new System.Windows.Forms.PictureBox();
             this.MovieCostTextBox = new System.Windows.Forms.TextBox();
@@ -40,6 +39,7 @@
             this.MovieCategoryLabel = new System.Windows.Forms.Label();
             this.MovieTitleLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
+            this.MovieComboBox = new System.Windows.Forms.ComboBox();
             this.YourSelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SmallGraphicPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -63,38 +63,6 @@
             this.PomptLabel.Size = new System.Drawing.Size(501, 24);
             this.PomptLabel.TabIndex = 2;
             this.PomptLabel.Text = "Choose the movie you wish to STREAM from the list below";
-            // 
-            // FilmListBox
-            // 
-            this.FilmListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FilmListBox.FormattingEnabled = true;
-            this.FilmListBox.ItemHeight = 20;
-            this.FilmListBox.Items.AddRange(new object[] {
-            "Cedar Rapids",
-            "Company Men",
-            "Death Race 2",
-            "Footloose New",
-            "Gnomeo and Juliet",
-            "I am Number Four",
-            "Just Go With It",
-            "No Strings Attached",
-            "Real Steel New",
-            "Sanctum",
-            "Season of the Witch",
-            "The Dilemma",
-            "The Eagle",
-            "The Green Hornet",
-            "The Mechanic",
-            "The Other Woman",
-            "The Rite",
-            "The Roommate",
-            "The Way Back",
-            "Waiting for Forever"});
-            this.FilmListBox.Location = new System.Drawing.Point(36, 92);
-            this.FilmListBox.Name = "FilmListBox";
-            this.FilmListBox.Size = new System.Drawing.Size(176, 284);
-            this.FilmListBox.Sorted = true;
-            this.FilmListBox.TabIndex = 3;
             // 
             // YourSelectionGroupBox
             // 
@@ -188,15 +156,27 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // MovieComboBox
+            // 
+            this.MovieComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.MovieComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MovieComboBox.FormattingEnabled = true;
+            this.MovieComboBox.Location = new System.Drawing.Point(36, 102);
+            this.MovieComboBox.Name = "MovieComboBox";
+            this.MovieComboBox.Size = new System.Drawing.Size(196, 252);
+            this.MovieComboBox.Sorted = true;
+            this.MovieComboBox.TabIndex = 6;
+            this.MovieComboBox.SelectedIndexChanged += new System.EventHandler(this.MovieComboBox_SelectedIndexChanged);
+            // 
             // SelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 408);
             this.ControlBox = false;
+            this.Controls.Add(this.MovieComboBox);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.YourSelectionGroupBox);
-            this.Controls.Add(this.FilmListBox);
             this.Controls.Add(this.PomptLabel);
             this.Controls.Add(this.CurrentMoviesLabel);
             this.MaximizeBox = false;
@@ -205,6 +185,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selection Form";
+            this.Load += new System.EventHandler(this.SelectionForm_Load);
             this.YourSelectionGroupBox.ResumeLayout(false);
             this.YourSelectionGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SmallGraphicPictureBox)).EndInit();
@@ -217,7 +198,6 @@
 
         private System.Windows.Forms.Label CurrentMoviesLabel;
         private System.Windows.Forms.Label PomptLabel;
-        private System.Windows.Forms.ListBox FilmListBox;
         private System.Windows.Forms.GroupBox YourSelectionGroupBox;
         private System.Windows.Forms.PictureBox SmallGraphicPictureBox;
         private System.Windows.Forms.TextBox MovieCostTextBox;
@@ -227,6 +207,7 @@
         private System.Windows.Forms.Label MovieCategoryLabel;
         private System.Windows.Forms.Label MovieTitleLabel;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.ComboBox MovieComboBox;
     }
 }
 
