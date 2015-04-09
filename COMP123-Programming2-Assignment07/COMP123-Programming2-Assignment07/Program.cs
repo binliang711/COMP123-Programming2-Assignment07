@@ -16,7 +16,7 @@ namespace COMP123_Programming2_Assignment07
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectionForm());
+            Application.Run(new SplashForm());
         }
     }
 }
