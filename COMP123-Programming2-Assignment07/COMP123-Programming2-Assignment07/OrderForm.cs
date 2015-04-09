@@ -48,5 +48,11 @@ namespace COMP123_Programming2_Assignment07
             this.ThirdForm.Owner = this.NextForm;
             this.ThirdForm.Show();
         }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            
+        }
     }
 }

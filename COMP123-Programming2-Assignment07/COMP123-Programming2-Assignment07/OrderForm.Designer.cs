@@ -108,6 +108,7 @@
             | System.Windows.Forms.Keys.E)));
             this.cancelToolStripMenuItem.Size = new System.Drawing.Size(269, 30);
             this.cancelToolStripMenuItem.Text = "Canc&el";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -136,6 +137,7 @@
             this.CancelButton.TabIndex = 6;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // StreamButton
             // 
