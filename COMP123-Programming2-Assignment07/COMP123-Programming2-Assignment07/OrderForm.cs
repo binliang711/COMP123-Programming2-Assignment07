@@ -12,10 +12,14 @@ namespace COMP123_Programming2_Assignment07
 {
     public partial class OrderForm : Form
     {
+        public StreamForm ThirdForm = new StreamForm();
+        
         public OrderForm NextForm;
         public OrderForm()
         {
             InitializeComponent();
+
+            
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -35,6 +39,14 @@ namespace COMP123_Programming2_Assignment07
             AboutBox1 aboutBox = new AboutBox1();
 
             aboutBox.ShowDialog();
+        }
+
+        private void StreamButton_Click(object sender, EventArgs e)
+        {
+            this.NextForm = (OrderForm)ActiveForm;
+            this.NextForm.Hide();
+            this.ThirdForm.Owner = this.NextForm;
+            this.ThirdForm.Show();
         }
     }
 }

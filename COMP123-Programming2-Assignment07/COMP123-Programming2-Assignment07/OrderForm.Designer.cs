@@ -99,6 +99,7 @@
             | System.Windows.Forms.Keys.M)));
             this.screamToolStripMenuItem.Size = new System.Drawing.Size(269, 30);
             this.screamToolStripMenuItem.Text = "Screa&m";
+            this.screamToolStripMenuItem.Click += new System.EventHandler(this.StreamButton_Click);
             // 
             // cancelToolStripMenuItem
             // 
@@ -145,6 +146,7 @@
             this.StreamButton.TabIndex = 7;
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
+            this.StreamButton.Click += new System.EventHandler(this.StreamButton_Click);
             // 
             // MovieSelectedGroupBox
             // 
