@@ -3,7 +3,7 @@
  * Date last Modified:April 17th,2015
  * Program description:COMP123_Assignment07,Movie Bonanza.
  * Revision	History:
- * 1.13 times revisions(see github)
+ * 1.14 times revisions(see github)
  * 2.Thanks for Rui.Chuang's supports for passing data between forms.
  * 3.Thanks for Tom Tsiliopoulos's instruction for Programming2.
  */
@@ -64,7 +64,7 @@ namespace COMP123_Programming2_Assignment07
 
         private void StreamButton_Click(object sender, EventArgs e)
         {
-            StreamForm newStreamForm = new StreamForm();
+            StreamForm newStreamForm = new StreamForm(this);
 
             //hide the current form
             this.Hide();
@@ -96,7 +96,8 @@ namespace COMP123_Programming2_Assignment07
                     AdditionalChargeTextBox.Visible = true;
                     //add addtional charge to the subtotal and grand total
                     MovieSubTotalTextBox.Text = "$" + Convert.ToString(this._selectedMovie.Cost + 10);
-                    GrandTotalTextBox.Text = "$" + Convert.ToString(this._selectedMovie.Cost * 1.13 + 10);
+                    MovieSalesTaxTextBox.Text = "$" + Convert.ToString((this._selectedMovie.Cost + 10)*0.13);
+                    GrandTotalTextBox.Text = "$" + Convert.ToString((this._selectedMovie.Cost + 10) * 1.13);
                 }
                 else if (OrderCheckBox.Checked == false)
                 {
@@ -114,5 +115,8 @@ namespace COMP123_Programming2_Assignment07
             }
 
         }
+        //public propertiess++++++++++++++++++++++++++++++++++++++++++++++++++
+        public string GrandTotal { get { return GrandTotalTextBox.Text; } }
+        public string MovieTitle { get { return MovieTitleTextBox.Text; } }
     }    
 }

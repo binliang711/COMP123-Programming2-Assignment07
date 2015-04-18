@@ -215,6 +215,7 @@
             this.AdditionalChargeTextBox.ReadOnly = true;
             this.AdditionalChargeTextBox.Size = new System.Drawing.Size(113, 29);
             this.AdditionalChargeTextBox.TabIndex = 21;
+            this.AdditionalChargeTextBox.Text = "10";
             this.AdditionalChargeTextBox.Visible = false;
             // 
             // AdditionalChargeLabel
