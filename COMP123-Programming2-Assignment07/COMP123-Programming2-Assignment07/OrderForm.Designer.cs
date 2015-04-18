@@ -45,7 +45,7 @@
             this.OrderCheckBox = new System.Windows.Forms.CheckBox();
             this.AdditionalChargeTextBox = new System.Windows.Forms.TextBox();
             this.AdditionalChargeLabel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.GrandTotalTextBox = new System.Windows.Forms.TextBox();
             this.GrandTotalLabel = new System.Windows.Forms.Label();
             this.MovieSalesTaxTextBox = new System.Windows.Forms.TextBox();
             this.MovieSalesTaxLabel = new System.Windows.Forms.Label();
@@ -180,7 +180,7 @@
             this.YourOrderGroupBox.Controls.Add(this.OrderCheckBox);
             this.YourOrderGroupBox.Controls.Add(this.AdditionalChargeTextBox);
             this.YourOrderGroupBox.Controls.Add(this.AdditionalChargeLabel);
-            this.YourOrderGroupBox.Controls.Add(this.textBox3);
+            this.YourOrderGroupBox.Controls.Add(this.GrandTotalTextBox);
             this.YourOrderGroupBox.Controls.Add(this.GrandTotalLabel);
             this.YourOrderGroupBox.Controls.Add(this.MovieSalesTaxTextBox);
             this.YourOrderGroupBox.Controls.Add(this.MovieSalesTaxLabel);
@@ -206,6 +206,7 @@
             this.OrderCheckBox.TabIndex = 23;
             this.OrderCheckBox.Text = "Order the DVD(adds $10.00 to your order)";
             this.OrderCheckBox.UseVisualStyleBackColor = true;
+            this.OrderCheckBox.CheckedChanged += new System.EventHandler(this.OrderCheckBox_CheckedChanged);
             // 
             // AdditionalChargeTextBox
             // 
@@ -227,13 +228,13 @@
             this.AdditionalChargeLabel.Text = "Additional Charge";
             this.AdditionalChargeLabel.Visible = false;
             // 
-            // textBox3
+            // GrandTotalTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(189, 221);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(113, 29);
-            this.textBox3.TabIndex = 19;
+            this.GrandTotalTextBox.Location = new System.Drawing.Point(189, 221);
+            this.GrandTotalTextBox.Name = "GrandTotalTextBox";
+            this.GrandTotalTextBox.ReadOnly = true;
+            this.GrandTotalTextBox.Size = new System.Drawing.Size(113, 29);
+            this.GrandTotalTextBox.TabIndex = 19;
             // 
             // GrandTotalLabel
             // 
@@ -408,7 +409,7 @@
         private System.Windows.Forms.PictureBox LargeGraphicPictureBox;
         private System.Windows.Forms.TextBox AdditionalChargeTextBox;
         private System.Windows.Forms.Label AdditionalChargeLabel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox GrandTotalTextBox;
         private System.Windows.Forms.Label GrandTotalLabel;
         private System.Windows.Forms.TextBox MovieSalesTaxTextBox;
         private System.Windows.Forms.Label MovieSalesTaxLabel;

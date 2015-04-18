@@ -12,9 +12,11 @@ namespace COMP123_Programming2_Assignment07
 {
     public partial class StreamForm : Form
     {
+        
         public StreamForm()
         {
             InitializeComponent();
+            
         }
 
         private void OKButton_Click(object sender, EventArgs e)
